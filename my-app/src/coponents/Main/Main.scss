@@ -1,0 +1,19 @@
+@import "../../var/variables.scss";
+
+main {
+  min-height: 600px;
+  background-color: $black_minus;
+  color: $white_sil;
+  text-align: center;
+  font-size: 8px;
+
+  h1,
+  h2 {
+    font-size: 66px;
+  }
+
+  img {
+    width: auto;
+    height: 300px;
+  }
+}

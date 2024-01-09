@@ -1,0 +1,15 @@
+.list_ {
+  list-style: none;
+ 
+  &flex {
+    li {
+      width: 30%;
+    }
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &block {
+    display: block;
+  }
+}
