@@ -60,7 +60,6 @@ function HomeTwo() {
 
   return (
     <div className="box_work-2">
-      <p>|домашня робота номер два|</p>
       <h2>CARD</h2>
       <img src={instrument} alt="instrument" />
       <List arr={cources} flex="flex" listItemComponent={CardUser} />

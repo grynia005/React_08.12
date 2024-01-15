@@ -1,15 +1,10 @@
 import { useState, useEffect } from "react";
-import { Button } from "../Button/Button";
-import { Container } from "../Container/Container";
-import { HomeFour } from "../HomeFourBox/HomeFourBox";
+import { Container } from "../coponents/Container/Container";
+import { HomeFour } from "../coponents/HomeFourBox/HomeFourBox";
 
 function HomeFourSection() {
-  const [showSect, setShowSect] = useState(false);
   const [starWars, setStarWars] = useState([]);
   const api = "https://swapi.dev/api/people/";
-  const handleShowSection = () => {
-    setShowSect(!showSect);
-  };
 
   useEffect(() => {
     async function getDataPeople() {
@@ -26,16 +21,12 @@ function HomeFourSection() {
     }
     getDataPeople();
   }, []);
-  console.log(starWars);
 
   return (
     <section>
-      <Button call={handleShowSection} number={4} />
-      {showSect && (
-        <Container>
-          <HomeFour arr={starWars} />
-        </Container>
-      )}
+      <Container>
+        <HomeFour arr={starWars} />
+      </Container>
     </section>
   );
 }

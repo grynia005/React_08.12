@@ -35,7 +35,7 @@ function HomeThree() {
       nameStyle: "Металкор",
       styleLink:
         "https://music.youtube.com/watch?v=SXdZv8HYUs0&si=MYzk-wN55zvrfo1z",
-      count: 0,
+      count: 10,
     },
     {
       id: 3,
