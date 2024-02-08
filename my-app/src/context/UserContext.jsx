@@ -1,26 +1,11 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext } from "react";
+import { useFetch } from "../hooks/useFetch";
 
 const urlApi = "https://jsonplaceholder.typicode.com/users";
 const UserInfoContext = createContext(null);
 
 const UserContext = ({ children }) => {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    async function getUsers() {
-      try {
-        const res = await fetch(urlApi);
-        if (!res.ok) {
-          throw new Error("Сталася страшна помилка серверу");
-        }
-        const data = await res.json();
-        setUsers(data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    getUsers();
-  }, []);
-  console.log(users);
+  const { data: users, isLoadind, isError } = useFetch(urlApi);
 
   return (
     <UserInfoContext.Provider value={users}>

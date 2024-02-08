@@ -16,22 +16,6 @@ import { HomeThree } from "./coponents/HomeThreeBox/HomeThreeBox";
 import { UserInfo } from "./pages/UserInfo";
 
 function App() {
-  // const [users, setUsers] = useState([]);
-  // useEffect(() => {
-  //   async function getUsers() {
-  //     try {
-  //       const res = await fetch(urlApi);
-  //       if (!res.ok) {
-  //         throw new Error("Сталася страшна помилка серверу");
-  //       }
-  //       const data = await res.json();
-  //       setUsers(data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   }
-  //   getUsers();
-  // }, []);
 
   return (
     <>
